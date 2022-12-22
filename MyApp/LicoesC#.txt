@@ -1,0 +1,111 @@
+
+Aliases
+            Ex.: System.String tem o alias string
+            sempre usar o alias 
+            int idade = 25;
+            Int32 idade = 25;
+
+            Valores padrão
+            Tipos built-in nunca é nulo (null)
+             . int => 0;
+             . float => 0;
+             . decimal => 0;
+             . bool => false;
+             . char => '\0';
+             . string => "";
+
+CONVERSÃO IMPLÍCITA:
+    Somente com passagem de dados
+    Possuem tipos compatíveis
+    Possuem dados compatíveis
+
+float valor = 25.8F;
+int outro = 25;
+
+valor = outro; // Conversão IMPLÍCITA.
+
+CONVERSÃO EXPLÍCITA
+    Informação do tipo é Obrigatória
+    Quando os tipos não são compatíveisDada pelo uso do tipo entre parent
+    eses antes da atribuição
+    Segue as mesmas regras anteriores
+
+    int inteiro - 100;
+    uint inteiroSemSinal = (uint)inteiro; // Conversao EXPLÍCITA;
+
+PARSE
+    Para todo tipo PRIMITIVO
+    Usado para converter um caractere ou string para outro tipo
+    Tem que haver COMPATIBILIDADE - No caso abaixo, se fosse .Parse("Ex!") daria erro
+
+
+    int inteiro = int.Parse("100");
+
+CONVERT 
+    Permite converter vários tipos de valor, NÃO APENAS String
+    Temos que informar o tipo na chamada da Conversão
+
+    int inteiro - Converrt.ToInt32("100");
+
+OPERADORES
+    Aritméticos
+    +-*/
+    Multiplicação e divisão são executados primeiro
+    Aceita short, int . float, double e decimal.
+
+    em caso de números inteiros, se o valor for real, será arredondado:
+    - 4.4 => 5
+
+    DE ATRIBUIÇÃO 
+    x += 5 = x = x + 5
+    x -= 5 = x = x -5 
+    x *= 5 = x = x * 5
+    x /= 5 = x = x / 5
+    x++ = x = x + 1;
+    x-- = x = x - 1;
+
+    DE COMPARAÇÃO => sempre retorna true / false
+    == igual
+    != diferente
+    >  maior que
+    <  menor que
+    >= maior ou igual a
+    <= menor ou igual a 
+
+    LÓGICOS => Para operações condicionais / sempre retorna true or false
+    && - E - and => Deve atender TODAS as condições
+    || - or => Se atender uma condição já retorna verdadeiro
+    !  - not => Negação
+
+ESTRUTURAS CONDICIONAIS 
+    IF  
+        if (condicao) {
+            caso seja verdadeiro 
+            ...
+        } else {
+            caso seja falso
+            ...
+        }
+
+        Caso uma só linha =>
+        if (condicao) ... else ... (sem parenteses)
+
+    SWITCH
+        Utilizado quanto temos muitas decisões
+        Executado em cascata
+        Parar manualmente com break
+        execução padrão = default
+
+        int valor = 1;
+        switch (valor)
+        {
+            case 1: Console.WriteLine("1"); break;
+            case 2: Console.WriteLine("2"); break;
+            case 3: Console.WriteLine("3"); break;
+            default: Console.WriteLine("4"); break; // se não for 1, 2 ou 
+        }
+        
+
+
+
+
